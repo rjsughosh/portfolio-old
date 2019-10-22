@@ -1,6 +1,6 @@
 .body {
-    font-family: 'Comic Sans MS';
-    /* font-family: 'Quicksand', sans-serif; */
+    /* font-family: 'Comic Sans MS'; */
+    font-family: 'Quicksand', sans-serif;
 }
 
 .pointer {
@@ -64,9 +64,11 @@
 }
 
 .header {
-    background: #666;
-    color: white;
-    z-index: 3
+    background: #000;
+    color: #fff;
+    z-index: 3;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .sticky {
@@ -76,7 +78,7 @@
 }
 
 .sticky+.content {
-    padding-top: 102px;
+    padding-top: 74px;
 }
 
 .profile-pic-section {
@@ -86,9 +88,10 @@
 
 .profile-pic-img {
     border-radius: 50%;
-    height: 5rem;
-    width: 5rem;
+    height: 2.5rem;
+    width: 2.5rem;
     transition: 0.4s all;
+    border: 2px solid #850516
 }
 
 .icon-close {
@@ -128,8 +131,14 @@
     width: 70%;
 }
 
+.menu-item:hover {
+    background-color: #850516;
+    color: #fff;
+}
+
 .menu-item {
-    padding: 1rem 5rem 1rem 0;
+    padding: 1.5rem 2.5rem;
+    text-align: center;
 }
 
 .about {
@@ -137,10 +146,12 @@
     text-align: center;
     border-bottom: 1px solid #666;
     padding: 5rem 0;
+    background: #000000;
+    color: #fff;
 }
 
 .circular-menu {
-    margin: 2.5rem 0;
+    margin: 2.5rem auto;
 }
 
 .project-each {
@@ -150,6 +161,14 @@
     margin: 1rem;
     padding: 1rem;
     ;
+}
+
+.project-each:nth-child(1) {
+    margin-left: 2rem;
+}
+
+.project-each:nth-child(2) {
+    margin-right: 2rem;
 }
 
 .project-each:hover {
@@ -169,6 +188,14 @@
     opacity: 0.8;
     transform: scale(1.1);
     transition: 0.3s all;
+    background: #850516;
+    color: #fff;
+    border: none;
+}
+
+.project-heading {
+    color: #850516;
+    ;
 }
 
 .project-more img {
@@ -191,6 +218,10 @@
 }
 
 .work {
+    text-align: center;
+    border-bottom: 1px solid #666;
+    background: #fff;
+    color: #000;
     min-height: 100vh;
     padding: 3rem 0;
 }
@@ -199,12 +230,24 @@
     border: 1px solid #666;
     border-radius: 5px;
     margin: 0;
-    padding: 1rem;
-    margin: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
+    margin: 2rem 1rem;
+}
+
+.small-project:hover {
+    transform: scale(1.02);
+    transition: 0.3s all;
+}
+
+.small-project:nth-child(2) {
+    margin-bottom: 0;
 }
 
 .skills {
     padding: 5rem 0;
+    background-color: #000;
+    color: #fff;
+    border: none
 }
 
 .skills-header {
@@ -239,14 +282,31 @@
 }
 
 .skills-table td i {
-    color: green;
+    color: #850516;
     font-size: 2rem;
     ;
 }
 
 .footer {
-    background: #000;
+    background: #850516;
     color: #fff;
     padding: 1rem;
-    font-size: 10px;
+    font-size: 12px;
+    font-weight: 900;
+    ;
+}
+
+#about h1,
+#about h2,
+#about h3 {
+    margin-top: 3rem;
+}
+
+.mini-project {
+    width: 51%;
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 1rem;
+    border: none;
+    padding-bottom: 0;
 }

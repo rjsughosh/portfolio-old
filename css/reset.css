@@ -1,3 +1,4 @@
+@import "https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
 html,
 body,
 div,
@@ -81,6 +82,11 @@ video {
     vertical-align: baseline;
 }
 
+h1 {
+    font-size: 32px;
+    ;
+}
+
 
 /* HTML5 display-role reset for older browsers */
 
@@ -128,289 +134,69 @@ table {
 
 /* circle menu======================== */
 
-
-/* /
-// Variables
-// */
-
-.glass {
-    background-image: radial-gradient(circle closest-side, rgba(38, 38, 38, 0.2), rgba(0, 0, 0, 0.63));
-    background-size: 100% 100%;
-    border-radius: 50%;
+.circular-menu {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
     position: relative;
 }
 
-.glass::before {
-    position: absolute;
-    width: 56%;
-    height: 26%;
-    top: 4%;
-    left: 22%;
-    border-radius: 50%;
-    background-image: linear-gradient(to bottom, rgba(207, 207, 207, 0.23), rgba(30, 30, 30, 0.06));
-    content: '';
+.circle {
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
 }
 
-.glass::after {
-    position: absolute;
-    width: 38%;
-    height: 19%;
-    bottom: 3%;
-    left: 31%;
-    border-radius: 50%;
-    background-image: linear-gradient(to bottom, rgba(93, 93, 93, 0.1), rgba(0, 0, 0, 0.18));
-    content: '';
+.open.circle {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
 }
 
-.flower {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-}
-
-.flower .spinner,
-.flower .inner,
-.flower .counterspin {
-    height: 100%;
-}
-
-.flower .spinner {
-    -webkit-animation: spin 45s infinite linear;
-    animation: spin 45s infinite linear;
-}
-
-.flower .counterspin {
-    -webkit-animation: counter-spin 45s infinite linear;
-    animation: counter-spin 45s infinite linear;
-}
-
-.flower .cover {
-    width: 120px;
-    height: 120px;
-    background-image: url("./../images/profile.png");
-    background-size: 100%;
-    border-radius: 50%;
-    box-shadow: 0 0 2px 4px #d1d1d1, 0 0 20px 4px #000;
-    position: absolute;
-    top: 0;
-}
-
-.flower a {
+.circle a {
+    text-decoration: none;
+    color: #fff;
     display: block;
-}
-
-.flower .child {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
     position: absolute;
-    top: 0;
-}
-
-.flower .child .leaf {
-    height: 100%;
+    text-align: center;
     border-radius: 50%;
-    visibility: hidden;
-    transition: -webkit-transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+    padding: 10px;
 }
 
-.flower .child .leaf img {
-    width: 64px;
-    height: 64px;
-    left: 28px;
-    top: 28px;
+.circle a:hover {
+    color: #eef;
+    background: #850516;
+}
+
+.menu-button {
     position: absolute;
-    border: none;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    display: block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    padding: 10px;
+    background: #850516;
 }
 
-.flower .child:nth-child(1) {
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
-
-.flower .child:nth-child(1) .leaf {
-    background-color: #3535e0;
-    background-size: 100%;
-    opacity: 0.94;
-    transition: box-shadow 0.16s ease-in-out, visibility 1.2s linear, -webkit-transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out, box-shadow 0.16s ease-in-out, visibility 1.2s linear;
-    transition: transform 1.2s ease-in-out, box-shadow 0.16s ease-in-out, visibility 1.2s linear, -webkit-transform 1.2s ease-in-out;
-}
-
-.flower .child:nth-child(1) .leaf .glass-holder {
-    height: 100%;
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-
-.flower .child:nth-child(2) {
-    -webkit-transform: rotate(-18deg);
-    transform: rotate(-18deg);
-}
-
-.flower .child:nth-child(2) .leaf {
-    background-color: #f00;
-    background-size: 100%;
-    opacity: 0.94;
-    transition: box-shadow 0.16s ease-in-out, visibility 1.2s linear, -webkit-transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out, box-shadow 0.16s ease-in-out, visibility 1.2s linear;
-    transition: transform 1.2s ease-in-out, box-shadow 0.16s ease-in-out, visibility 1.2s linear, -webkit-transform 1.2s ease-in-out;
-}
-
-.flower .child:nth-child(2) .leaf .glass-holder {
-    height: 100%;
-    -webkit-transform: rotate(18deg);
-    transform: rotate(18deg);
-}
-
-.flower .child:nth-child(3) {
-    -webkit-transform: rotate(54deg);
-    transform: rotate(54deg);
-}
-
-.flower .child:nth-child(3) .leaf {
-    background-color: #00bd00;
-    background-size: 100%;
-    opacity: 0.94;
-    transition: box-shadow 0.16s ease-in-out, visibility 1.2s linear, -webkit-transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out, box-shadow 0.16s ease-in-out, visibility 1.2s linear;
-    transition: transform 1.2s ease-in-out, box-shadow 0.16s ease-in-out, visibility 1.2s linear, -webkit-transform 1.2s ease-in-out;
-}
-
-.flower .child:nth-child(3) .leaf .glass-holder {
-    height: 100%;
-    -webkit-transform: rotate(-54deg);
-    transform: rotate(-54deg);
-}
-
-.flower .child:nth-child(4) {
-    -webkit-transform: rotate(126deg);
-    transform: rotate(126deg);
-}
-
-.flower .child:nth-child(4) .leaf {
-    background-color: #ff0;
-    background-size: 100%;
-    opacity: 0.94;
-    transition: box-shadow 0.16s ease-in-out, visibility 1.2s linear, -webkit-transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out, box-shadow 0.16s ease-in-out, visibility 1.2s linear;
-    transition: transform 1.2s ease-in-out, box-shadow 0.16s ease-in-out, visibility 1.2s linear, -webkit-transform 1.2s ease-in-out;
-}
-
-.flower .child:nth-child(4) .leaf .glass-holder {
-    height: 100%;
-    -webkit-transform: rotate(-126deg);
-    transform: rotate(-126deg);
-}
-
-.flower .child:nth-child(5) {
-    -webkit-transform: rotate(198deg);
-    transform: rotate(198deg);
-}
-
-.flower .child:nth-child(5) .leaf {
-    background-color: #ebe8e8;
-    background-size: 100%;
-    opacity: 0.94;
-    transition: box-shadow 0.16s ease-in-out, visibility 1.2s linear, -webkit-transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out, box-shadow 0.16s ease-in-out, visibility 1.2s linear;
-    transition: transform 1.2s ease-in-out, box-shadow 0.16s ease-in-out, visibility 1.2s linear, -webkit-transform 1.2s ease-in-out;
-}
-
-.flower .child:nth-child(5) .leaf .glass-holder {
-    height: 100%;
-    -webkit-transform: rotate(-198deg);
-    transform: rotate(-198deg);
-}
-
-.flower .glass {
-    height: 100%;
-    transition: -webkit-transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
-}
-
-.flower:hover {
-    -webkit-transform: scale(3.4);
-    transform: scale(3.4);
-}
-
-.flower:hover .inner {
-    -webkit-transform: scale(0.294117647058824);
-    transform: scale(0.294117647058824);
-}
-
-.flower:hover .leaf {
-    visibility: visible;
-    -webkit-transform: rotate(720deg) translateX(144px) rotate(2250deg);
-    transform: rotate(720deg) translateX(144px) rotate(2250deg);
-}
-
-.flower:hover .leaf:hover {
-    box-shadow: 0 0 34px #d3d9ff, 0 0 0 1px #000, inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-.flower:hover .leaf .glass {
-    -webkit-transform: rotate(-2970deg);
-    transform: rotate(-2970deg);
-}
-
-html {
-    /* height: 100%; */
-    /* overflow: hidden; */
-}
-
-body {
-    /* background-color: #02102c;
-    background-image: linear-gradient(135deg, #000080 10%, #000 90%);
-    background-size: cover;
-    overflow: visible;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%; */
-}
-
-a {
-    outline: 0;
-}
-
-#title {
-    color: #ddd;
-    font-size: 18px;
-    position: fixed;
-    bottom: 10px;
-    left: 14px;
-}
-
-@-webkit-keyframes spin {
-    to {
-        -webkit-transform: rotate(1turn);
-        transform: rotate(1turn);
-    }
-}
-
-@keyframes spin {
-    to {
-        -webkit-transform: rotate(1turn);
-        transform: rotate(1turn);
-    }
-}
-
-@-webkit-keyframes counter-spin {
-    to {
-        -webkit-transform: rotate(-1turn);
-        transform: rotate(-1turn);
-    }
-}
-
-@keyframes counter-spin {
-    to {
-        -webkit-transform: rotate(-1turn);
-        transform: rotate(-1turn);
-    }
+.menu-button:hover {
+    background-color: #eef;
+    color: #850516
 }

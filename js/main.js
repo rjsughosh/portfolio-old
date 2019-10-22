@@ -6,7 +6,6 @@ function openprofileimage() {
         close_icon.classList.add('show');
         let proPicCvr = document.getElementById('profile-pic-cvr');
         proPicCvr.classList.add('profile-pic-cvr')
-        debugger
         document.getElementById('content').classList.add('no-scroll');
     } catch (e) {
 
@@ -30,17 +29,15 @@ function closeProfilePic() {
 }
 
 function scrollToThis(id) {
-    debugger
     let selectedFrame = document.getElementById(id)
     window.scrollTo({
-        top: selectedFrame.offsetTop - 114,
+        top: selectedFrame.offsetTop - 79,
         left: 0,
         behavior: 'smooth'
     });
 }
 
 function openLinkNewtab(link) {
-    debugger
     var win = window.open(link, '_blank');
     win.focus();
 }
@@ -56,4 +53,18 @@ function stickyHeader() {
     } else {
         header.classList.remove("sticky");
     }
+}
+
+//Circular menu
+var items = document.querySelectorAll('.circle a');
+
+for (var i = 0, l = items.length; i < l; i++) {
+    items[i].style.left = (50 - 45 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+
+    items[i].style.top = (50 + 45 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+}
+
+document.querySelector('.menu-button').onclick = function(e) {
+    e.preventDefault();
+    document.querySelector('.circle').classList.toggle('open');
 }
