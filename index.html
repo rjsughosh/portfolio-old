@@ -1,0 +1,317 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Sughosh</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="body" class="body flex-col">
+    <section id="header-profile" class="header flex">
+        <div class="flex-center profile-pic-section">
+            <div id="profile-pic-cvr" class="profile-pic relative">
+                <i id="profile-icon-close" onclick="closeProfilePic()" class="pointer material-icons md-light absolute icon-close hide">close</i>
+
+                <img onclick="openprofileimage()" id="profile-pic" class="pointer profile-pic-img" src="images/profile.png">
+            </div>
+        </div>
+        <div class="flex-end menu-items">
+            <div onclick="scrollToThis('about')" class="pointer menu-item align-self ">About</div>
+            <div onclick="scrollToThis('work')" class="pointer menu-item align-self ">Work</div>
+            <div onclick="scrollToThis('skills')" class="pointer menu-item align-self ">Skills</div>
+        </div>
+    </section>
+
+    <section id="content" class="content body-section">
+        <section id='about' class='about flex-center'>
+            <div class='align-self'>
+                <h2>Hi, Im Sughosh</h2>
+                <h4>I am a full-stack developer</h4>
+                <h6>When Im not coding, I do memes and watch random stuff on the internet</h6>
+                <div id='comic-sans-disclaimer'>
+                    <h6>P.S. yes this is Comic Sans</h6>
+                </div>
+                <div class='flex-center circular-menu'>
+                    <div class="flower">
+                        <div class="inner">
+                            <div class="spinner">
+                                <div class="child">
+                                    <a class="leaf" href="https://www.facebook.com/sughoshrj" target="_blank"><img src="./images/fb.svg" alt="Facebook" />
+                                        <div class="glass-holder">
+                                            <div class="counterspin">
+                                                <div class="glass"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a class="leaf" href="https://twitter.com/rj_sughosh" target="_blank"><img src="images/bird.svg" alt="Twitter" />
+                                        <div class="glass-holder">
+                                            <div class="counterspin">
+                                                <div class="glass"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a class="leaf" href="https://www.linkedin.com/in/rjsughosh/" target="_blank"><img src="./images/linkedin.png" alt="linkedin" />
+                                        <div class="glass-holder">
+                                            <div class="counterspin">
+                                                <div class="glass"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a class="leaf" href="https://github.com/rjsughosh" target="_blank"><img src="./images/octocat.svg" alt="GitHub" />
+                                        <div class="glass-holder">
+                                            <div class="counterspin">
+                                                <div class="glass"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a class="leaf" href="mailto:srjahagi@asu.edu" target="_blank"><img src="./images/email.png" alt="Email" />
+                                        <div class="glass-holder">
+                                            <div class="counterspin">
+                                                <div class="glass"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id='work' class='about work flex-center'>
+            <div class='align-self'>
+                <h2>Projects</h2>
+                <h4>Here are some of the Projects I've worked on</h4>
+
+                <div class='projects-wrap'>
+                    <div class="project-row flex-center">
+                        <div class="project-each">
+                            <h2 class='project-heading'>Twitter Network Analysis</h2>
+                            <p class='project-description'>Developed a twitter followers network graph by leveraging twitter api using tweepy in python and performed analysis on the graph such as Distribution, Clustering Coefficient, pagerank and diameter.</p>
+                            <div onclick="openLinkNewtab('www.github.com/rjsughosh/twitter-smm')" class='pointer project-more flex-around'>
+                                <div class='project-more-text'>
+                                    View more
+                                </div>
+                                <i class="material-icons">
+                                    keyboard_arrow_right
+                                </i>
+                            </div>
+                        </div>
+                        <div class="project-each">
+                            <h2 class='project-heading'>Real-time Facial emotion recognition</h2>
+                            <p class='project-description'>Implemented a real-time application that takes continuous input from a webcam and instantly detects the facial emotion of the person and places a suitable emoji, using Python and Convolutional Neural Networks.</p>
+                            <div onclick="openLinkNewtab('www.github.com/rjsughosh/RealtimeFacialEmotionRecognition')" class='pointer project-more flex-around'>
+                                <div class='project-more-text'>
+                                    View more
+                                </div>
+                                <i class="material-icons">
+                                    keyboard_arrow_right
+                                </i>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="project-row flex-center">
+                        <div class="project-each">
+                            <h2 class='project-heading'>Jazz Serverless Development Platform</h2>
+                            <p class='project-description'>Jazz, a serverless development platform, accelerates adoption of serverless technology within your enterprise. Jazz comes with a beautiful UI that lets developers quickly create serverless applications with a click of a button.
+                                Its modular design makes it easy to add new integrations that your enterprise needs.</p>
+                            <p class='project-description'>
+                                <ul class='jazz-work'>
+                                    <li>Full-stack web development employing NodeJS APIs, AWS services, Jenkins, Serverless framework.</li>
+                                    <li>Developed Responsive web apps using Angular 7 and React for Jazz.</li>
+                                    <li>Adopted Unit tests for NodeJS APIs using Mocha testing framework.</li>
+                                    <li>Built documentation website for Jazz using gohugo.io.</li>
+                                    <li>Incorporated Graphs in Webpages using D3, ChartJS and Angular charts.</li>
+                                </ul>
+                            </p>
+                            <div onclick="openLinkNewtab('www.github.com/rjsughosh/jazz')" class='pointer project-more flex-around'>
+                                <div class='project-more-text'>
+                                    View more
+                                </div>
+                                <i class="material-icons">
+                                    keyboard_arrow_right
+                                </i>
+                            </div>
+                        </div>
+                        <div class="project-each">
+                            <h2 class='project-heading'>Mini Projects</h2>
+
+                            <div class="small-project">
+                                <h2 class='project-heading'>Bounce – OpenGL game</h2>
+                                <p class='project-description'>Built a game similar to Nokia classic ‘bounce’. Implemented in C++ using OpenGL library.</p>
+
+                            </div>
+
+                            <div class="small-project">
+                                <h2 class='project-heading'>Phonebook</h2>
+                                <p class='project-description'>Developed a phonebook application in C++ using files data structure where you can sign up to the app to have your account. Implemented instant search feature using Binary search trees.</p>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="work skills flex-center">
+            <div class='skills-wrap'>
+                <h2 class="skills-header">Skills</h2>
+                <h4 class="skills-header">If I were to rate myself, I'd probaly rate..</h2>
+                    <table class="skills-table">
+                        <thead>
+                            <tr>
+                                <th>Skill</th>
+                                <th>Beginner</th>
+                                <th>Intermediate</th>
+                                <th>Expert</th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>C++</td>
+                                    <td></td>
+                                    <td>
+                                        <i class="material-icons">
+                                        done
+                                    </i>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>JavaScript</td>
+                                    <td></td>
+                                    <td>
+                                        <i class="material-icons">
+                                        done
+                                    </i>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Python</td>
+                                    <td></td>
+                                    <td>
+                                        <i class="material-icons">
+                                        done
+                                    </i>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Java</td>
+                                    <td></td>
+                                    <td>
+                                        <i class="material-icons">
+                                        done
+                                    </i>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Html</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <i class="material-icons">
+                                        done
+                                    </i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Css</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <i class="material-icons">
+                                        done
+                                    </i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Angular</td>
+                                    <td></td>
+                                    <td>
+                                        <i class="material-icons">
+                                        done
+                                    </i>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>React</td>
+                                    <td></td>
+                                    <td>
+                                        <i class="material-icons">
+                                        done
+                                    </i>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Machine Learning</td>
+                                    <td>
+                                        <i class="material-icons">
+                                        done
+                                    </i>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>AWS</td>
+                                    <td>
+                                        <i class="material-icons">
+                                        done
+                                    </i>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                    </table>
+
+            </div>
+
+
+        </section>
+    </section>
+
+
+    <section class="footer flex-between">
+        <div>Sughosh Raviraj Jahagirdar</div>
+        <div>2019</div>
+
+
+    </section>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

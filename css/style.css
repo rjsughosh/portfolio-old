@@ -1,0 +1,252 @@
+.body {
+    font-family: 'Comic Sans MS';
+    /* font-family: 'Quicksand', sans-serif; */
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.font-awesome {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.align-self {
+    align-self: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.show {
+    opacity: 1;
+    transition: 0.3s all;
+    pointer-events: all;
+}
+
+.header {
+    background: #666;
+    color: white;
+    z-index: 3
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 102px;
+}
+
+.profile-pic-section {
+    width: 30%;
+    padding: 1rem;
+}
+
+.profile-pic-img {
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    transition: 0.4s all;
+}
+
+.icon-close {
+    top: 2rem;
+    right: 2rem;
+    transition: 0.4s all;
+}
+
+.no-scroll {
+    overflow: none;
+}
+
+.enlarge-profile-pic {
+    height: 95vh;
+    width: 95vh;
+    transition: 0.4s all;
+    overflow: hidden;
+}
+
+.profile-pic-cvr {
+    /* on enlarge */
+    background: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    transition: 0.4s all;
+    overflow: hidden;
+}
+
+.menu-items {
+    width: 70%;
+}
+
+.menu-item {
+    padding: 1rem 5rem 1rem 0;
+}
+
+.about {
+    min-height: 70vh;
+    text-align: center;
+    border-bottom: 1px solid #666;
+    padding: 5rem 0;
+}
+
+.circular-menu {
+    margin: 2.5rem 0;
+}
+
+.project-each {
+    width: 50%;
+    border: 1px solid #666;
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 1rem;
+    ;
+}
+
+.project-each:hover {
+    transform: scale(1.02);
+    transition: 0.3s all;
+}
+
+.project-more {
+    border: 1px solid #666;
+    border-radius: 2rem;
+    padding: 1rem;
+    width: fit-content;
+    margin: 1rem auto;
+}
+
+.project-more:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: 0.3s all;
+}
+
+.project-more img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.project-more-text {
+    margin-top: 3px;
+    ;
+}
+
+.jazz-work {
+    text-align: left;
+    list-style: initial;
+}
+
+.jazz-work li {
+    margin: 0.8rem;
+}
+
+.work {
+    min-height: 100vh;
+    padding: 3rem 0;
+}
+
+.small-project {
+    border: 1px solid #666;
+    border-radius: 5px;
+    margin: 0;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.skills {
+    padding: 5rem 0;
+}
+
+.skills-header {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.skills-table {}
+
+.skills-table thead {}
+
+.skills-table tbody {}
+
+.skills-table td,
+.skills-table th {
+    /* margin: 0.5rem; */
+    padding: 0.5rem 2rem;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.skills-table th {
+    font-weight: bold;
+    font-size: 1.2rem;
+    ;
+    ;
+}
+
+.skills-table td:nth-child(1) {
+    padding-right: 2.5rem;
+    text-align: left;
+}
+
+.skills-table td i {
+    color: green;
+    font-size: 2rem;
+    ;
+}
+
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 1rem;
+    font-size: 10px;
+}
